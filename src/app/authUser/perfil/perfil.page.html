@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="warning"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Tu Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list *ngIf="infoUser">
+
+    <ion-item>
+      <ion-label position="stacked">ID Usuario</ion-label>
+      <ion-input>{{infoUser.idUser}}</ion-input>
+      <ion-icon (click)="editAtributo('idUser')" slot="end" name="create"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Nombre</ion-label>
+      <ion-input>{{infoUser.nombreUser}}</ion-input>
+      <ion-icon (click)="editAtributo('nombreUser')" slot="end" name="create"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Apellido</ion-label>
+      <ion-input>{{infoUser.apellidoUser}}</ion-input>
+      <ion-icon (click)="editAtributo('apellidoUser')" slot="end" name="create"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input>{{infoUser.emailUser}}</ion-input>
+      <ion-icon slot="end" name=""></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Edad</ion-label>
+      <ion-input>{{infoUser.edadUser}}</ion-input>
+      <ion-icon (click)="editAtributo('edadUser')" slot="end" name="create"></ion-icon>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list>
+    <ion-card>
+      <ion-card-header class="ion-text-center">
+        <h5>Juegos Favoritos</h5>
+      </ion-card-header>
+      <ion-card-content>
+
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+  
+</ion-content>

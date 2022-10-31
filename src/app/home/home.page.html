@@ -1,0 +1,145 @@
+<!-- MAÑANA:
+-COLOCAR DATOS DE DIRECCION, CORREO Y N°CONTACTO
+-AGREGAR UN INPUT DE LOGIN o 
+-AGREGAR UN INPUT PARA COLOCAR UN NOMBRE -->
+
+<!-- HEADER (como componente mas adelante) -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="warning"></ion-menu-button>
+    </ion-buttons>
+    <ion-row>
+      <ion-col>
+        <ion-searchbar placeholder="Buscar en Game Store" showCancelButton="always"></ion-searchbar>
+      </ion-col>
+    </ion-row>
+    <ion-buttons slot="end">
+      <ion-button color="warning">
+        <ion-icon name="basket"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<!-- HEADER -->
+
+<!-- CUERPO -->
+<ion-content>
+  <!-- SLIDE -->
+  <ion-slides>
+    <ion-slide>
+      <img src="assets/img_banner/banner_1.png" alt="">
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide 2</h1>
+    </ion-slide>
+  </ion-slides>
+  <!-- SLIDE -->
+
+  <!-- BIENVENIDO -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Bienvenido "{{ "data.nombre" }}" a</ion-card-subtitle>
+      <ion-card-title>GAME STORE!</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Todos tenemos la necesidad de buscar los mejores juegos de nuestra plataforma en la que jugamos, un videojuego nuevo que nos rete y sacie nuestras ganas de vivir una nueva aventura jugando en nuestra consola o pc. Es por esto que os traemos esta selección de algunos de los mejores juegos de todas las pltaformas!
+
+      <ion-button [routerLink]="['/acerca']" class="ion-margin-top" color="warning">¿QUIENES SOMOS?</ion-button>
+    </ion-card-content>
+  </ion-card>
+  <!-- BIENVENIDO -->
+
+  <!-- CATEGORIAS -->
+  <ion-card>
+    <ion-item>
+      <ion-label color="warning">CATEGORIAS</ion-label>
+    </ion-item>
+    
+    <ion-item href="#">
+      <ion-icon name="logo-playstation" slot="start" color="warning"></ion-icon>
+      <ion-label color="warning">PLAYSTATION</ion-label>
+    </ion-item>
+
+    <ion-item href="#">
+      <ion-icon name="logo-octocat" slot="start" color="warning"></ion-icon>
+      <ion-label color="warning">NINTENDO</ion-label>
+    </ion-item>
+  
+    <ion-item href="#">
+      <ion-icon name="logo-xbox" slot="start" color="warning"></ion-icon>
+      <ion-label color="warning">XBOX</ion-label>
+    </ion-item>
+
+    <ion-item href="#">
+      <ion-icon name="desktop" slot="start" color="warning"></ion-icon>
+      <ion-label routerLink="/pc" color="warning">PC GAMES</ion-label>
+    </ion-item>
+    <!-- CATEGORIAS -->
+
+    <!-- JUEGOS OFERTAS (DESPUES CON TYPESCRIPT SE MEJORARÁ Y COMO COMPONENTE) -->
+    <ion-item href="#">
+      <ion-icon name="game-controller" slot="start" color="warning"></ion-icon>
+      <ion-label routerLink="/vertodo" color="warning">VER TODO</ion-label>
+    </ion-item>
+  </ion-card>
+
+  <!-- CRUD -->
+
+  <!-- <ion-list>
+    <ion-item-sliding *ngFor="let obs of observable">
+      <ion-item lines="inset" button [routerLink]="['/details', obs.id]">
+        <ion-label>
+          {{obs.titulo}}
+        </ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option (click)="removeObs(item)" color="secondary">
+          <ion-icon icon="checkmark" slot="end"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/admin" routerDirection="forward">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab> -->
+
+  <!-- CRUD -->
+
+  <!-- NGFOR -->
+  <!-- <ion-item *ngFor="let game of games">
+    <ion-card>
+      <ion-item>
+        <ion-label color="warning">OFERTAS DEL DIA</ion-label>
+      </ion-item>
+      <ion-card-header>
+        <img [src]='game.thumbnail'/>
+        <ion-card-subtitle>$000.000 (Oferta)</ion-card-subtitle>
+        <ion-card-title>{{game.title}}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        {{game.short_description}}
+        <ion-buttons class="ion-margin-top" color="warning">
+          <ion-button color="warning">AGREGAR A CARRITO  <ion-icon color="warning" name="basket"></ion-icon></ion-button>
+        </ion-buttons>
+      </ion-card-content>
+    </ion-card>
+  </ion-item> -->
+  <!-- NGFOR -->
+
+</ion-content>
+
+<!-- HEADER -->
+
+<!-- FOOTER (DESPUES SERA COMPONENTE) -->
+<!-- <Footer class="ion-margin-start">
+  <h6>direcion: duoc #1798</h6>
+  <h6>correo: duoc@duocuc.cl</h6>
+  <h6>n°: 9 9999 9999</h6>
+</Footer> -->
+<!-- FOOTER -->
+

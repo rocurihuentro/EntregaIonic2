@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title class="ion-text-center"><h6>DETALLES</h6></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div id="container">
+    
+    <!-- CARD -->
+    <ion-card>
+      
+      <ion-card-header>
+        <ion-card-subtitle class="ion-text-center">Detalles del Producto</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+
+        <!-- FORMULARIO -->
+
+        <ion-list lines="full">
+
+          <!-- <ion-item *ngIf="obs">
+            <ion-label position="floating">Foto</ion-label>
+            <ion-input type="text" placeholder="Titulo" [(ngModel)] = "obs.titulo" required></ion-input>
+          </ion-item> -->
+
+          <ion-item *ngIf="user">
+            <ion-label position="floating">Nombre de Usuario</ion-label>
+            <ion-input type="text" placeholder="Nombre de Usuario" [(ngModel)] = "user.idUser" required></ion-input>
+          </ion-item>
+
+          <ion-item *ngIf="user">
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input type="text" placeholder="Nombre" [(ngModel)] = "user.nombreUser" required></ion-input>
+          </ion-item>
+      
+          <ion-item *ngIf="user">
+            <ion-label position="floating">Apellido</ion-label>
+            <ion-input type="text" placeholder="Apellido" [(ngModel)] = "user.apellidoUser" required></ion-input>
+          </ion-item>
+
+          <ion-item *ngIf="user">
+            <ion-label position="floating">Edad</ion-label>
+            <ion-input type="number" placeholder="Edad" [(ngModel)] = "user.edadUser" required></ion-input>
+          </ion-item>
+
+          <ion-item *ngIf="user">
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email" placeholder="Email" [(ngModel)] = "user.emailUser" required></ion-input>
+          </ion-item>
+
+        </ion-list>
+        <ion-button expand="block" color="success" (click)="saveUser()">GUARDAR</ion-button>
+        <!-- END-FORMULARIO -->
+
+      </ion-card-content>
+    </ion-card>
+    <!-- END-CARD -->
+  </div>
+  
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" color="danger">
+    <ion-fab-button color="danger" routerLink="/admin-user" routerDirection="forward" (click)="removeUser(userId)">
+      <ion-icon name="trash"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button color="success" routerLink="/admin" routerDirection="forward">
+      <ion-icon name="arrow-back-sharp"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

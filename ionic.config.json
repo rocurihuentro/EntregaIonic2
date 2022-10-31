@@ -1,0 +1,7 @@
+{
+  "name": "GAMESTORE",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

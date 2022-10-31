@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>GAMES PC</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides>
+    <ion-slide mode="md">
+      <ion-card mode="md">
+        <ion-img [src]=''></ion-img>
+        <ion-card-header>
+          <img (click)="nextSlide()" src="" alt="">
+          <img (click)="nextSlide()" src="" alt="">
+          <img (click)="nextSlide()" src="" alt="">
+          <ion-card-title mode="md">
+            Juegos
+          </ion-card-title>
+          <ion-button mode="md" size="small" color="warning">
+            <ion-icon mode="md" color="light" slot="start" name="star"></ion-icon>
+            15
+          </ion-button>
+          <ion-card-subtile>Juegos de PC</ion-card-subtile>
+        </ion-card-header>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

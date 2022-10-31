@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title class="ion-text-center"><h6>EMPRESA</h6></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <div id="container">
+
+    <!-- CARD -->
+  <ion-card>
+    
+    <ion-card-header>
+      <ion-card-subtitle class="ion-text-center">Bienvenido</ion-card-subtitle>
+      <ion-card-subtitle class="ion-text-center">Ingreso Administrador</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <!-- FORMULARIO -->
+      <ion-item>
+        <ion-input type="email" id="email" placeholder="Email" expand="block"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input type="password" id="password" placeholder="Contraseña" expand="block"></ion-input>
+      </ion-item>
+  
+      <!-- <p>¿Olvidaste tu contraseña?<span routerLink="reset" (click)="onRedReset()"> Aqui</span></p> -->
+  
+      <ion-button expand="block" color="success" (click)="onLog()">Entrar</ion-button>
+      <!-- END-FORMULARIO -->
+
+    </ion-card-content>
+  </ion-card>
+  <!-- END-CARD -->
+
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" >
+    <ion-button color="warning" routerLink="/nameuser" expand="block" routerDirection="forward">Entrar como usuario</ion-button>
+  </ion-fab>
+
+</ion-content>

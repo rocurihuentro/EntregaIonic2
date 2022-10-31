@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center"><h6>INICIO SESSION</h6></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <div id="container">
+
+    <!-- CARD -->
+  <ion-card>
+    
+    <ion-card-header>
+      <ion-card-subtitle class="ion-text-center">Bienvenido a GAMESTORE</ion-card-subtitle>
+      <ion-card-subtitle class="ion-text-center">Ingresa tus datos</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <!-- FORMULARIO -->
+      <ion-item>
+        <ion-input [(ngModel)]="credenciales.emailUser" type="email" placeholder="Email" expand="block"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input [(ngModel)]="credenciales.passwordUser" type="password" placeholder="Contraseña" expand="block"></ion-input>
+      </ion-item>
+  
+      <p>¿Olvidaste tu contraseña?<span routerLink="/reset"> Aqui</span></p>
+  
+      <ion-button (click)="onLogin()" expand="block" color="success">Entrar</ion-button>
+
+      <p>No tienes cuenta? <span routerLink="/register-user">Registrate</span></p>
+      <!-- END-FORMULARIO -->
+
+    </ion-card-content>
+  </ion-card>
+  <!-- END-CARD -->
+
+  </div>
+</ion-content>

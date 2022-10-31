@@ -1,0 +1,76 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-menu-toggle>
+          <ion-list id="inbox-list">
+            <ion-row class="ion-justify-content-center ion-margin-top">
+              <img src="assets/icon_gamestore/logo.png" width="100 px" alt="">
+            </ion-row>
+            
+            <ion-item>
+              <ion-label color="warning"></ion-label>
+            </ion-item>
+  
+            <ion-item *ngIf="login == false" detail="true" [routerLink]="['/login-user']">
+              <ion-label color="warning">Login</ion-label>
+              <ion-icon color="warning" slot="start" name="log-in"></ion-icon>
+            </ion-item>
+  
+            <ion-item *ngIf="login" detail="true">
+              <ion-label (click)="irPerfil()" color="warning">Perfil</ion-label>
+              <ion-icon color="warning" slot="start" name="person-circle"></ion-icon>
+            </ion-item>
+  
+            <ion-item detail="true">
+              <ion-label (click)="irHome()" color="warning">Home</ion-label>
+              <ion-icon color="warning" slot="start" name="home"></ion-icon>
+            </ion-item>
+  
+            <ion-item detail="true">
+              <ion-label color="warning">Categoria</ion-label>
+              <ion-icon color="warning" slot="start" name="list"></ion-icon>
+            </ion-item>
+  
+            <ion-item detail="true">
+              <ion-label color="warning">Contacto</ion-label>
+              <ion-icon color="warning" slot="start" name="call"></ion-icon>
+            </ion-item>
+  
+            <ion-item detail="true">
+              <ion-label color="warning">Acerca de GAMESTORE</ion-label>
+              <ion-icon color="warning" slot="start" name="help"></ion-icon>
+            </ion-item>
+  
+            <ion-item  *ngIf="login && tipoUser == 'admin' " detail="true">
+              <ion-label color="warning" datail="true" (click)="irAdmin()">Administrar</ion-label>
+              <ion-icon color="warning" slot="start" name="apps"></ion-icon>
+            </ion-item>
+            
+            <ion-item  *ngIf="login" detail="true">
+              <ion-label color="warning" datail="true" (click)="logout()">Logout</ion-label>
+              <ion-icon color="warning" slot="start" name="apps"></ion-icon>
+            </ion-item>
+            
+          </ion-list>
+  
+          <ion-footer class="ion-margin-start ion-margin-top">
+            
+            <ion-label color="warning">CONTACTO</ion-label>
+            <ion-item>
+              <ion-label color="warning">Direccion: Duoc #1798</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label color="warning">N°: +56 9 666 999 69</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label color="warning">GAMESTORE@DUOCUC.CL</ion-label>
+            </ion-item>
+          </ion-footer>
+        </ion-menu-toggle> 
+      </ion-content>
+    </ion-menu>
+    
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

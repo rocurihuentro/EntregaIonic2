@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title class="ion-text-center"><h6>RECUPERAR USUARIO</h6></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <div id="container">
+
+    <!-- CARD -->
+  <ion-card>
+    
+    <ion-card-header>
+      <ion-card-subtitle class="ion-text-center">Se enviara una solicitud a su correo para restablecer su clave</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <!-- FORMULARIO -->
+      <ion-item>
+        <ion-input id="email" placeholder="Email" expand="block"></ion-input>
+      </ion-item>
+      
+      <ion-button expand="block" color="success" (click)="onReset()">ENVIAR CORREO</ion-button>
+      <!-- END-FORMULARIO -->
+
+    </ion-card-content>
+  </ion-card>
+  <!-- END-CARD -->
+  </div>
+
+  <ion-fab vertical="bottom" vertical="start" slot="fixed">
+    <ion-button color="success" routerLink="/login-user" routerDirection="forward">
+      <ion-icon name="arrow-back-sharp"></ion-icon>
+    </ion-button>
+  </ion-fab>
+
+</ion-content>

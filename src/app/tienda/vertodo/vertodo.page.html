@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="warning"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>All Games</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let game of games">
+    <ion-card>
+      <ion-item>
+        <ion-label color="warning">OFERTAS DEL DIA</ion-label>
+      </ion-item>
+      <ion-card-header>
+        <img [src]='game.thumbnail'/>
+        <ion-card-subtitle>$000.000 (Oferta)</ion-card-subtitle>
+        <ion-card-title>{{game.title}}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        {{game.short_description}}
+        <ion-buttons class="ion-margin-top" color="warning">
+          <ion-button color="warning">AGREGAR A CARRITO  <ion-icon color="warning" name="basket"></ion-icon></ion-button>
+        </ion-buttons>
+
+          <ion-buttons slot="start">
+            <!-- <ion-button (click)="verDetalles()">
+              <ion-icon slot="icon-only" name="eye"></ion-icon>
+            </ion-button> -->
+      
+            <ion-button ng-click="onLike(game)" ng-show="game.heart">
+              <ion-icon slot="icon-only" name="heart-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+      
+      </ion-card-content>
+    </ion-card>
+  </ion-item>
+</ion-content>

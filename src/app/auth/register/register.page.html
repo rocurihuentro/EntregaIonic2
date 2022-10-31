@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title class="ion-text-center"><h6>Register User</h6></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <div id="container">
+
+    <!-- CARD -->
+  <ion-card>
+    
+    <ion-card-header>
+      <ion-card-subtitle class="ion-text-center">Otorga un Administrador</ion-card-subtitle>
+      <ion-card-subtitle class="ion-text-center">Registralo</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <!-- FORMULARIO -->
+      <ion-item>
+        <ion-input [(ngModel)]="user.idUser" placeholder="Nombre de Usuario" expand="block"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input [(ngModel)]="user.nombreUser" placeholder="Nombre" expand="block"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-input [(ngModel)]="user.apellidoUser" placeholder="Apellido" expand="block"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="number" [(ngModel)]="user.edadUser" placeholder="Edad" expand="block"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="email" [(ngModel)]="user.emailUser" placeholder="Email" expand="block"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input [(ngModel)]="user.passwordUser" placeholder="Contraseña" expand="block"></ion-input>
+      </ion-item>
+  
+      <!-- <p>¿Olvidaste tu contraseña?<span routerLink="reset" (click)="onRedReset()"> Aqui</span></p> -->
+  
+      <ion-button (click)="onRegister()" expand="block" color="success">REGISTRAR ADMIN</ion-button>
+
+      <!-- END-FORMULARIO -->
+
+    </ion-card-content>
+  </ion-card>
+  <!-- END-CARD -->
+
+  </div>
+
+  <ion-fab vertical="bottom" vertical="start" slot="fixed">
+    <ion-button color="success" (click)="onback()" routerDirection="forward">
+      <ion-icon name="arrow-back-sharp"></ion-icon>
+    </ion-button>
+  </ion-fab>
+
+</ion-content>

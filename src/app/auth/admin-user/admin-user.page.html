@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" ><h6>ADMIN USER</h6></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- <ion-fab vertical="bottom" vertical="start" slot="fixed"> -->
+    <ion-button color="success" routerLink="/admin" routerDirection="forward">
+      <ion-icon name="arrow-back-sharp"></ion-icon>
+    </ion-button>
+  
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-subtitle class="ion-text-center">LISTA DE USUARIOS</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-list>
+        <ion-item-sliding *ngFor="let user of ionusuario">
+          <ion-item lines="inset" button [routerLink]="['/detailsuser', user.id]">
+            <ion-label>
+              {{user.idUser}}
+            </ion-label>
+            <ion-icon name="create-sharp"></ion-icon>
+          </ion-item>
+          <ion-item-options side="end">
+            <ion-item-option (click)="removeUser(item)" color="secondary">
+              <ion-icon icon="checkmark" slot="end"></ion-icon>
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success" routerLink="/detailsuser" routerDirection="forward">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

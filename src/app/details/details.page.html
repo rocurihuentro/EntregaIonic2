@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title class="ion-text-center"><h6>DETALLES</h6></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div id="container">
+    
+    <!-- CARD -->
+    <ion-card>
+      
+      <ion-card-header>
+        <ion-card-subtitle class="ion-text-center">Detalles del Producto</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+
+        <!-- FORMULARIO -->
+
+        <ion-list lines="full">
+
+          <!-- <ion-item *ngIf="obs">
+            <ion-label position="floating">Foto</ion-label>
+            <ion-input type="text" placeholder="Titulo" [(ngModel)] = "obs.titulo" required></ion-input>
+          </ion-item> -->
+
+          <ion-item *ngIf="obs">
+            <ion-label position="floating">TITULO</ion-label>
+            <ion-input type="text" placeholder="Titulo" [(ngModel)] = "obs.titulo" required></ion-input>
+          </ion-item>
+      
+          <ion-item *ngIf="obs">
+            <ion-label position="floating">PRECIO</ion-label>
+            <ion-input type="number" placeholder="Precio" [(ngModel)] = "obs.precio" required></ion-input>
+          </ion-item>
+
+          <ion-item *ngIf="obs">
+            <ion-label position="floating">DETALLE</ion-label>
+            <ion-input type="text" placeholder="Detalle" [(ngModel)] = "obs.detalle" required></ion-input>
+          </ion-item>
+
+          <ion-item *ngIf="obs">
+            <ion-label position="floating">PLATAFORMA</ion-label>
+            <ion-input type="text" placeholder="Plataforma" [(ngModel)] = "obs.plataforma" required></ion-input>
+          </ion-item>
+
+          <ion-item *ngIf="obs">
+            <ion-label position="floating">STOCK</ion-label>
+            <ion-input type="number" placeholder="Genero" [(ngModel)] = "obs.stock" required></ion-input>
+          </ion-item>
+
+        </ion-list>
+        <ion-button expand="block" color="success" (click)="saveObs()">GUARDAR</ion-button>
+        <!-- END-FORMULARIO -->
+
+      </ion-card-content>
+    </ion-card>
+    <!-- END-CARD -->
+  </div>
+  
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" color="danger">
+    <ion-fab-button color="danger" routerLink="/admin" routerDirection="forward" (click)="removeObs(obsId)">
+      <ion-icon name="trash"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button color="success" routerLink="/admin" routerDirection="forward">
+      <ion-icon name="arrow-back-sharp"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
+
